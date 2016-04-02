@@ -67,8 +67,8 @@ function drawTaps(){
 
 function drawScreen() {
 	context.fillStyle = "#FFFFFF";
-	context.fillRect(0,0,theCanvas.width,theCanvas.height);
-	drawTargets();
+	context.fillRect(0,0,theCanvas.width,theCanvas.height-theCanvas.width/6);
+	//drawTargets();
 	drawTaps();
 }
 
