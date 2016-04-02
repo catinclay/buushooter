@@ -40,17 +40,18 @@ SimpleDiskParticle.prototype.moveToTop = function(indexX, indexY, theCanvas){
 
 
 //A function for drawing the particle.
-SimpleDiskParticle.prototype.drawToContext = function(theContext) {
-	theContext.fillStyle = this.boarderColer;
-	theContext.beginPath();
-	theContext.arc(this.x, this.y, this.radius, 0, 2*Math.PI, false);
-	theContext.closePath();
-	theContext.fill();
+SimpleDiskParticle.prototype.drawToContext = function(theContext,image) {
+	theContext.drawImage(image, this.x-this.radius, this.y-this.radius);
+	// theContext.fillStyle = this.boarderColer;
+	// theContext.beginPath();
+	// theContext.arc(this.x, this.y, this.radius, 0, 2*Math.PI, false);
+	// theContext.closePath();
+	// theContext.fill();
 
 
-	theContext.fillStyle = this.color;
-	theContext.beginPath();
-	theContext.arc(this.x, this.y, this.radius*0.9, 0, 2*Math.PI, false);
-	theContext.closePath();
-	theContext.fill();
+	// theContext.fillStyle = this.color;
+	// theContext.beginPath();
+	// theContext.arc(this.x, this.y, this.radius*0.9, 0, 2*Math.PI, false);
+	// theContext.closePath();
+	// theContext.fill();
 }
