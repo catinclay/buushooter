@@ -99,11 +99,13 @@ function inputDownLinstener(touchX, touchY){
 		}
 	}
 	if(shoot){
+		var temp = targets[0];
+		temp.moveToTop(Math.floor(Math.random()*linesNumber),theCanvas);
 		targets.splice(0,1);
 		for(i = 0; i < targets.length; ++i){
-			targets[i].moveToIndexY(i, theCanvas);
+			targets[i].moveToIndexY(i, rawsNumber-1, theCanvas);
 		}
-		targets.push(new SimpleDiskParticle(Math.floor(Math.random()*linesNumber),i,theCanvas));
+		targets[i] = temp;
 	}
 }
 
