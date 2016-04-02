@@ -6,7 +6,7 @@ var linesNumber = 3;
 var rawsNumber = 7;
 var taps = [];
 var targets = [];
-var easeAmount = 0.17;
+var easeAmount = 0.25;
 
 function init(){
 	addListeners();
@@ -14,7 +14,7 @@ function init(){
 	drawTaps();
 	makeTargets();
 	drawTargets();
-	timer = setInterval(onTimerTick, 1000/45);
+	timer = setInterval(onTimerTick, 1000/30);
 }
 
 function moveTargets(){
