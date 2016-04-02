@@ -100,10 +100,10 @@ function inputDownLinstener(touchX, touchY){
 	}
 	if(shoot){
 		var temp = targets[0];
-		temp.moveToTop(Math.floor(Math.random()*linesNumber),theCanvas);
+		temp.moveToTop(Math.floor(Math.random()*linesNumber), rawsNumber-1,theCanvas);
 		targets.splice(0,1);
 		for(i = 0; i < targets.length; ++i){
-			targets[i].moveToIndexY(i, rawsNumber-1, theCanvas);
+			targets[i].moveToIndexY(i, theCanvas);
 		}
 		targets[i] = temp;
 	}

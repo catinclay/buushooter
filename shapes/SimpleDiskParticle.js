@@ -22,9 +22,11 @@ SimpleDiskParticle.prototype.moveToIndexY = function(indexY, theCanvas){
 }
 
 SimpleDiskParticle.prototype.moveToTop = function(indexX, indexY, theCanvas){
+	this.indexX = indexX;
 	this.x = theCanvas.width/6 + indexX * theCanvas.width/3;
 	this.y = -(this.radius*(indexY*1.2+3));
 	this.moveToY = theCanvas.height-(this.radius*(indexY*1.2+3));
+	this.isMoving = true;
 }
 
 //The function below returns a Boolean value representing whether the point with the coordinates supplied "hits" the particle.
