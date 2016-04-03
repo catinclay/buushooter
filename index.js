@@ -7,6 +7,7 @@ var rawsNumber = 7;
 var taps = [];
 var targets = [];
 var easeAmount = 0.25;
+var image  = document.getElementById("circleImg");
 
 function init(){
 	addListeners();
@@ -46,7 +47,7 @@ function makeTargets(){
 function drawTargets(){
 	var i;
 	for (i = 0; i<targets.length; ++i){
-		targets[i].drawToContext(context);
+		targets[i].drawToContext(context,image);
 	}	
 }
 
